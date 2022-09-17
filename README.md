@@ -2,4 +2,6 @@
 
 ## Links
 
-[impressum](readme.md)
+[impressum](impressum.md)
+[impressum](impressum)
+[impressum](impressum.html)
