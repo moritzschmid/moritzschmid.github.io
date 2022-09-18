@@ -1,5 +1,11 @@
 .Header {
     background-color: #282c34;
     font-size: calc(10px + 2vmin);
+    font-weight: 600;
     color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+  align-items: left;
+  justify-content: left;
 }

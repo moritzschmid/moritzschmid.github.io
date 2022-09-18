@@ -72,3 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Add new Components 
 npx generate-react-cli component {{componentName}}
+
+
+## Used packages
+### BurgerMenu
+* npm install react-burger-menu
