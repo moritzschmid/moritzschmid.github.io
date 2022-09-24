@@ -17,7 +17,11 @@
   }
 }
 
-.App-header {
+.App-header code {
+  font-weight: 100;
+
+}
+  .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -28,10 +32,14 @@
   color: white;
   padding-top: 110px;
   padding-left:30px;
+  font-weight: 100;
+
 }
 
 .App-link {
   color: #61dafb;
+  font-weight: 100;
+
 }
 
 @keyframes App-logo-spin {

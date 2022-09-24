@@ -11,13 +11,13 @@ const SideBar = (props) => {
   const handleInput = event =>   props.callBack(event.target.value);
 
   return (  
-    <Menu>
+    <Menu className='menu'>
       <a className="menu-item" href="/reactsample">
         Sample
       </a>
       <input
           className='counter'
-          min="0" max="30" step="1"
+          min="0" max="60" step="1"
           type='range'
           value={counter}
           onChange={handleChange}
