@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run deploy`
+
+deploy the page to prod env
+Open [https://moritzschmid.github.io/](https://moritzschmid.github.io/) to view it in your browser.
+
 ### `npm start`
 
 Runs the app in the development mode.\
