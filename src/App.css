@@ -4,6 +4,7 @@
 
 .App p {
   margin:0px;
+  margin-top:10px;
 }
 
 .App-logo {
@@ -32,10 +33,15 @@
   color: white;
   padding-top: 110px;
   padding-left:30px;
+  padding-right:30px;
   font-weight: 100;
 
 }
 
+.App-header a {
+  color: white;
+  text-decoration: none;
+}
 .App-link {
   color: #61dafb;
   font-weight: 100;

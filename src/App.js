@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 
 
 function App() {
@@ -17,17 +17,33 @@ function App() {
     setLines(fillArray(val));
     setCounter(val);
   }
+  const [posts, setPosts] = useState([{title:"loading"}]);
+
+  useEffect(() => {
+    fetch('https://archive.org/services/search/v1/scrape?fields=title&q=title%3A%28react%29&and[]=subject%3A"software"&and[]=subject%3A"code"&count=100')
+       .then((response) => response.json())
+       .then((data) => {
+          console.log(data.items);
+          setPosts(data.items);
+       })
+       .catch((err) => {
+          console.log(err.message);
+       });
+ }, []);
+
   return (
     <div className="App" id="outer-container">
       <SideBar callBack={callBack} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       <Header counter={counter} ></Header>
 
       <header className="App-header" id="page-wrap  ">
-        {/* <img src={logo} className="App-logo" alt="logo" />*/}
-       
-        {lines.map((object, i) =>
+        <img src={logo} className="App-logo" alt="logo" />
+        Danke an das sabbernde etwas neben mir ;-)
+        {posts.slice(0, counter).map((object, i) =>
           <p key={i}>
-            {object} Edit <code>src/App.js</code> and save to reload.
+            <a href={'https://archive.org/details/'+object.identifier}>
+              {object.title} 
+            </a>
           </p>
         )}
 
