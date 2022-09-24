@@ -1,17 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+
 import './Header.css';
 
-const Header = () => (
+const Header = (props) => {
+
   
+  return (
+
     <div className="Header" data-testid="Header">
       moritzschmid.github.io
+      <span className='counter'>{props.counter}</span>
+     
     </div>
-  
-);
+  )
+    ;
 
-Header.propTypes = {};
+}
 
-Header.defaultProps = {};
 
 export default Header;

@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { elastic as Menu } from 'react-burger-menu';
 
 import './SideBar.css';
 
-const SideBar = () => (
+const SideBar = (props) => {
   
-  <Menu>
-    <a className="menu-item" href="/reactsample">
-      Sample
-    </a>
-  </Menu>
-  
-  
-);
+  const [counter, setCounter] = useState(props.counterDefault);
+  const handleChange = event => setCounter(event.target.value);
+  const handleInput = event =>   props.callBack(event.target.value);
 
-SideBar.propTypes = {};
+  return (  
+    <Menu>
+      <a className="menu-item" href="/reactsample">
+        Sample
+      </a>
+      <input
+          className='counter'
+          min="0" max="30" step="1"
+          type='range'
+          value={counter}
+          onChange={handleChange}
+          onMouseUp={handleInput}
+          onTouchEnd={handleInput}>
+          </input>
+      <span className='counter'>{counter}</span>
+    </Menu>  
+  );
+}
+
+SideBar.propTypes = {
+  counterDefault: PropTypes.number
+};
 
 SideBar.defaultProps = {};
 
