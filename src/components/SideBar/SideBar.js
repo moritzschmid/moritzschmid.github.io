@@ -4,28 +4,40 @@ import { elastic as Menu } from 'react-burger-menu';
 
 import './SideBar.css';
 
-const SideBar = (props) => {
-  
-  const [counter, setCounter] = useState(props.counterDefault);
-  const handleChange = event => setCounter(event.target.value);
-  const handleInput = event =>   props.callBack(event.target.value);
+const SideBar = ({ counterDefault, callBack }) => {
 
-  return (  
-    <Menu className='menu'>
+  const [counter, setCounter] = useState(counterDefault);
+
+  const handleChange = event => {
+    console.log("handleChange");
+    setCounter(parseInt(event.target.value));
+  };
+
+  const handleInput = event => {
+    console.log("handleInput");
+    callBack(parseInt(event.target.value));
+  };
+
+  return (
+    <Menu className='Menu'>
+      {/*
       <a className="menu-item" href="/reactsample">
         Sample
       </a>
-      <input
+      */}
+      <span>
+        <input
           className='counter'
-          min="0" max="60" step="1"
+          min="0" max="100" step="1"
           type='range'
           value={counter}
           onChange={handleChange}
           onMouseUp={handleInput}
           onTouchEnd={handleInput}>
-          </input>
+        </input>
+      </span>
       <span className='counter'>{counter}</span>
-    </Menu>  
+    </Menu>
   );
 }
 

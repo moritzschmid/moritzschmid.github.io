@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import './Header.css';
 
-const Header = (props) => {
-
-  
+const Header = ({counter}) => {
   return (
-
     <div className="Header" data-testid="Header">
       moritzschmid.github.io
-      <span className='counter'>{props.counter}</span>
-     
-    </div>
-  )
-    ;
-
+      <span className='counter'>{counter}</span>
+    </div>);
 }
-
 
 export default Header;

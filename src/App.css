@@ -22,29 +22,31 @@
   font-weight: 100;
 
 }
-  .App-header {
+
+.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /*align-items: center;
-  justify-content: center;*/
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
+
+  /*respect header*/
   padding-top: 110px;
+
   padding-left:30px;
   padding-right:30px;
   font-weight: 100;
-
+  padding-bottom:50px;
 }
 
 .App-header a {
   color: white;
   text-decoration: none;
 }
-.App-link {
-  color: #61dafb;
-  font-weight: 100;
+
+.App .spacer {
+padding-bottom: 20px;
 
 }
 

@@ -1,0 +1,8 @@
+.Links {}
+
+.Links a.link {
+    padding-bottom: 5px;
+    color: #61dafb;
+    font-weight: 600;
+    display: block;
+  }
