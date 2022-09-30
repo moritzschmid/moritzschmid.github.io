@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
 import Links from './components/Links/Links'
+import Pong from './components/Pong/Pong'
 import React, { useState, useEffect } from 'react';
 import Content from './components/Content/Content';
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<span><div id="cssAnchor"></div><Links></Links><div className="spacer">&nbsp;</div></span>} />
               <Route path="redux" element={<Content counter={counter} title="redux" key="content1"></Content>} />
               <Route path="react" element={<Content counter={counter} key="content2"></Content>} />
+              <Route path="pong" element={<Pong/>} />
             </Route>
           </Routes>
         </BrowserRouter>

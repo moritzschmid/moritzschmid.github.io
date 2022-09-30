@@ -1,0 +1,9 @@
+.Pill {
+    width: 150px;
+    background-color: black;
+    border-radius: 15px;
+    line-height: 30px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
