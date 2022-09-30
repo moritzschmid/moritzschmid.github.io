@@ -26,6 +26,7 @@ function App() {
       <header className="App-header" id="page-wrap  ">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
+        <div id="cssAnchor"></div>
         <Links></Links>
         <div className="spacer"></div>
         <Content counter={counter} title="redux" key="content1"></Content>

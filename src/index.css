@@ -12,11 +12,17 @@ code {
     monospace;
 }
 
-* {
+* { 
   box-sizing: border-box;
 }
 
 #page-wrap {
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+html {
+  /*don't change font scaling with orientation */
+  -webkit-text-size-adjust:100%;
+  background-color:#282c34;
 }

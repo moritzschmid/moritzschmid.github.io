@@ -28,13 +28,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 1vmin);
+  font-size: 15px;
   color: white;
 
   /*respect header*/
-  padding-top: 110px;
+  padding-top: calc(env(safe-area-inset-top,0) + 110px);
+  padding-left: calc(env(safe-area-inset-left,0) + 30px );
 
-  padding-left:30px;
   padding-right:30px;
   font-weight: 100;
   padding-bottom:50px;
@@ -57,4 +57,17 @@ padding-bottom: 20px;
   to {
     transform: rotate(360deg);
   }
+}
+
+#cssAnchor{
+  padding-top:30px;
+  padding-bottom:40px;
+}
+#cssAnchor::before {
+  --yyy: "Welcome";
+  content: var(--yyy);
+  font-weight: 900;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+
 }

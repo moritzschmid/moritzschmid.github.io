@@ -20,8 +20,8 @@
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 30px;
-  top: 30px;
+  left:  calc(env(safe-area-inset-left,0) + 30px);;
+  top: calc(env(safe-area-inset-top,0) + 30px);
 }
 
 /* Color/shape of burger icon bars */

@@ -1,37 +1,51 @@
 .Header {
-    position: fixed;
-    background-color: #000;
-    font-size: calc(25px);
-    font-weight: 100;
+    background-color: #555;
     color: #61dafb;
-    padding-left: 96px;
-    padding-top: 0px;
-    left:0px;
-    top:0px;
-    z-index:999;    
-    height:90px;
-    line-height:90px;
-    width:100%;
-    vertical-align: middle;
+
+    font-size: 25px;
+    font-weight: 100;
+    
+    /*notch*/
+    padding-left: calc(env(safe-area-inset-left,0) + 96px);
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    z-index: 999;
+
+    height: calc(env(safe-area-inset-top, 0) + 90px);
+    line-height: calc(env(safe-area-inset-top, 0) + 90px);
+
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    
+    display: grid;
+
+    /*prevent line break when scaling text*/
+    white-space: nowrap;
 }
 
-.Header .counter{
-    box-sizing: unset !important;
-    margin-left:15px;
-    height:10px;
+.innerHeader_spacer {
+    line-height: calc(env(safe-area-inset-top, 30));
+    height: calc(env(safe-area-inset-top, 30));
     display: inline-block;
-
 }
 
-.Header span.counter{
-    width:40px;
-
+.innerHeader {
+    line-height: 90px;
+    vertical-align: middle;
+    display: inline-block;
 }
 
-.Header input.counter{
-    background-color:#273a3a ;
-    border-style: none;
-    color:#FFF;
-    font-size: 15px;
-    font-weight: 600;
+.Header .counter {
+    box-sizing: unset !important;
+    margin-left: 15px;
+    height: 10px;
+    display: inline-block;
+}
+
+.Header span.counter {
+    width: 40px;
 }
