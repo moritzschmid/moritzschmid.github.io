@@ -20,11 +20,26 @@ const SideBar = ({ counterDefault, callBack }) => {
 
   return (
     <Menu className='Menu'>
-      {/*
-      <a className="menu-item" href="/reactsample">
-        Sample
-      </a>
-      */}
+       {
+        <a className="menu-item" href="/">
+          Home
+        </a>
+      }
+      {
+        <a className="menu-item" href="/react">
+          React
+        </a>
+      }
+      {
+        <a className="menu-item" href="/redux">
+          Redux
+        </a>
+      }
+      {
+        <a className="menu-item" href="/pong">
+          Pong
+        </a>
+      }
       <span>
         <input
           className='counter'

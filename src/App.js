@@ -5,15 +5,19 @@ import SideBar from './components/SideBar/SideBar';
 import Links from './components/Links/Links'
 import React, { useState, useEffect } from 'react';
 import Content from './components/Content/Content';
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
 
 
 function App() {
-  var counterDefault = 5;
+  var counterDefault =  localStorage.getItem('counter') ?  parseInt(localStorage.getItem('counter')) : 5;
 
   const [counter, setCounter] = useState(counterDefault);
   const callBack = val => {
     console.log("callBack got type " + typeof (val));
     setCounter(val);
+    localStorage.setItem('counter', val);
+
   }
 
   useEffect(() => { console.log("render App", counter); });
@@ -26,11 +30,19 @@ function App() {
       <header className="App-header" id="page-wrap  ">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-        <div id="cssAnchor"></div>
-        <Links></Links>
-        <div className="spacer"></div>
-        <Content counter={counter} title="redux" key="content1"></Content>
-        <Content counter={counter} key="content2"></Content>
+
+        <Outlet></Outlet>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/"  >
+              <Route path="/" element={<span><div id="cssAnchor"></div><Links></Links><div className="spacer">&nbsp;</div></span>} />
+              <Route path="redux" element={<Content counter={counter} title="redux" key="content1"></Content>} />
+              <Route path="react" element={<Content counter={counter} key="content2"></Content>} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+
+
       </header>
     </div>
   );
