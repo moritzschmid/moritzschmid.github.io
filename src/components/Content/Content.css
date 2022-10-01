@@ -6,3 +6,7 @@
     font-size: larger;
     font-weight: 600;
 }
+.Content a {
+    color: white;
+    text-decoration: none;
+  }

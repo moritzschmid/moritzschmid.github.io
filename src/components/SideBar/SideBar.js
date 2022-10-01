@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { elastic as Menu } from 'react-burger-menu';
+import {Link} from 'react-router-dom';
 
 import './SideBar.css';
 
@@ -18,28 +19,28 @@ const SideBar = ({ counterDefault, callBack }) => {
     callBack(parseInt(event.target.value));
   };
 
+  const [isOpen, setOpen] = useState(false)
+
+  const handleIsOpen = () => {
+    setOpen(!isOpen)
+  }
+
+  const closeSideBar = () => {
+    setOpen(false)
+  }
+
   return (
-    <Menu className='Menu'>
-       {
-        <a className="menu-item" href="/">
-          Home
-        </a>
-      }
-      {
-        <a className="menu-item" href="/react">
-          React
-        </a>
-      }
-      {
-        <a className="menu-item" href="/redux">
-          Redux
-        </a>
-      }
-      {
-        <a className="menu-item" href="/pong">
-          Pong
-        </a>
-      }
+    <Menu className='Menu'
+    isOpen={isOpen}
+    onOpen={handleIsOpen}
+    onClose={handleIsOpen}>
+     
+      <Link to="/" onClick={closeSideBar}>Home</Link>
+      <Link to="/react" onClick={closeSideBar}>React</Link>
+      <Link to="/redux" onClick={closeSideBar}>Redux</Link>
+      <Link to="/pong" onClick={closeSideBar}>Pong</Link>
+      
+     
       <span>
         <input
           className='counter'

@@ -16,10 +16,6 @@ code {
   box-sizing: border-box;
 }
 
-#page-wrap {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
 
 html {
   /*don't change font scaling with orientation */
