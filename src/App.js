@@ -29,7 +29,7 @@ function App() {
         <Header counter={counter} ></Header>
         <SideBar counterDefault={counter} callBack={callBack} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
 
-        <header className="App-header">
+        <div className="App-content">
           <Outlet></Outlet>
           <Routes>
             <Route path="/" element={<span><div id="cssAnchor"></div><Links></Links></span>} />
@@ -37,8 +37,7 @@ function App() {
             <Route path="react" element={<Content counter={counter} key="content2"></Content>} />
             <Route path="pong" element={<Pong />} />
           </Routes>
-          <div className="spacer">&nbsp;</div>
-        </header>
+        </div>
       </div>
     </Router>
 
