@@ -40,6 +40,7 @@ const SideBar = ({ counterDefault, callBack }) => {
       <Link to="/redux" onClick={closeSideBar}>Redux</Link>
       <Link to="/pong" onClick={closeSideBar}>Pong</Link>
       <Link to="/graph" onClick={closeSideBar}>Graph</Link>
+      <Link to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
       
      
       <span>

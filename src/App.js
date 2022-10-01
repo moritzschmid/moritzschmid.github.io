@@ -5,6 +5,7 @@ import SideBar from './components/SideBar/SideBar';
 import Links from './components/Links/Links';
 import Pong from './components/Pong/Pong';
 import Graph from './components/Graph/Graph';
+import AppleMusic from './components/AppleMusic/AppleMusic';
 import React, { useState, useEffect } from 'react';
 import Content from './components/Content/Content';
 import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
@@ -38,6 +39,7 @@ function App() {
             <Route path="react" element={<Content counter={counter} key="content2"></Content>} />
             <Route path="pong" element={<Pong />} />
             <Route path="graph" element={<Graph />} />
+            <Route path="applemusic" element={<AppleMusic counter={counter} title="Billy" />} />
           </Routes>
         </div>
       </div>

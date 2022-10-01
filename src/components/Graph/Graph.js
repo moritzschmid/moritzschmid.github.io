@@ -8,7 +8,7 @@ const Graph = () => {
   const [termInput, setTermInput] = useState("x*x");
   const [term, setTerm] = useState(termInput);
   const [hasError, setHasError] = useState(false);
-  const [min, setMin] = useState(0);
+  const [min, setMin] = useState(-20);
   const [max, setMax] = useState(20);
 
   const handleChangeMin = event => {
