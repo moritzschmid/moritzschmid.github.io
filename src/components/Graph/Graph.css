@@ -1,0 +1,20 @@
+.graph  {
+    padding-top: 30px;
+}
+
+.Graph .s-label {
+    color:#FFF;
+    font-weight:900;
+}
+ .error {
+    color:red;
+    font-weight:900;
+    border-width: 0px;
+}
+.Graph {
+ text-align:center;
+ width: 100%;
+}
+.Graph label {
+    min-width:80px;
+}

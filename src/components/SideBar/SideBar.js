@@ -39,6 +39,7 @@ const SideBar = ({ counterDefault, callBack }) => {
       <Link to="/react" onClick={closeSideBar}>React</Link>
       <Link to="/redux" onClick={closeSideBar}>Redux</Link>
       <Link to="/pong" onClick={closeSideBar}>Pong</Link>
+      <Link to="/graph" onClick={closeSideBar}>Graph</Link>
       
      
       <span>
