@@ -1,15 +1,14 @@
-.AppleMusic {
+.component {
     padding-bottom: 30px;
-
 }
-.AppleMusic header{
-    padding-top:30px;
+
+.component header {
+    padding-top: 30px;
     font-size: larger;
     font-weight: 600;
 }
-.AppleMusic a {
+
+.component a {
     color: white;
     text-decoration: none;
-  }
-
-  
+}

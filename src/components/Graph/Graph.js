@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import PropTypes from 'prop-types';
-import './Graph.css';
+import styles from './Graph.module.css';
 
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Brush, Label, LabelList } from 'recharts';
 
@@ -29,13 +29,11 @@ const Graph = () => {
       setTerm(event.target.value);
       setHasError(false);
       console.log("set: " + event.target.value);
-
     }
     catch (ex) {
       setHasError(true);
-      console.log("failed: ", ex);
-
     }
+
     console.log(event.target.value);
   };
 
@@ -51,37 +49,44 @@ const Graph = () => {
 
 
   return (
-    <div className="Graph">
+    <div className={styles.graph}>
       <table>
-        <tr>
-          <td>
-            <label for="term">Term: </label>
-          </td>
-          <td>
-            <input name="Term" type="text" value={termInput} onChange={handleChange}></input>
-            {hasError ? <span className="error"> Fehler!</span> : <span></span>}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="min">Min: </label>
-          </td>
-          <td>
-            <input name="min" type="number" value={min} onChange={handleChangeMin}></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="max">Max: </label>
-          </td>
-          <td>
-            <input name="max" type="number" value={max} onChange={handleChangeMax}></input>
-          </td>
-        </tr>
+        <tbody>
+
+          <tr>
+            <td>
+              <label htmlFor="term">Term: </label>
+            </td>
+            <td>
+              <input name="Term" type="text" value={termInput} onChange={handleChange}></input>
+            </td>
+            <td>
+              {hasError ? <span className={styles.error}> Fehler!</span> : <span></span>}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="min">Min: </label>
+            </td>
+            <td>
+              <input name="min" type="number" value={min} onChange={handleChangeMin}></input>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="max">Max: </label>
+            </td>
+            <td>
+              <input name="max" type="number" value={max} onChange={handleChangeMax}></input>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
       </table>
 
 
-      <div className="graph" data-testid="Graph">
+      <div className={styles.chart} data-testid="Graph">
         <LineChart width={350} height={350} data={data02} syncId="test"  >
           <CartesianGrid stroke="#f5f5f5" fill="#e6e6e6" />
           <XAxis type="time" dataKey="time" height={40}   >

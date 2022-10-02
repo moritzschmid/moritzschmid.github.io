@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './AppleMusic.css';
+import styles from './AppleMusic.module.css';
 
 const AppleMusic = ({counter,title}) => {
 
@@ -26,7 +26,7 @@ const AppleMusic = ({counter,title}) => {
   }
 
 return (
-  <div className="AppleMusic" data-testid="AppleMusic">
+  <div className={styles.component} data-testid="AppleMusic">
   <input name="Term" type="text" value={termInput} onChange={handleChange}></input>
     <header>Search results for "{title}" from archive.org</header>
      {

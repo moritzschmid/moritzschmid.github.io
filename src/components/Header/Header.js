@@ -1,13 +1,13 @@
 import React from 'react';
-import './Header.css';
+import styles from './Header.module.css';
 
 const Header = ({counter}) => {
   return (
-    <div className="Header" data-testid="Header"> 
-      <div className="innerHeader_spacer">&nbsp;</div>
-      <div className="innerHeader">
+    <div className={styles.header} data-testid="Header"> 
+      <div className={styles.innerHeader_spacer}>&nbsp;</div>
+      <div className={styles.innerHeader}>
       moritzschmid.github.io
-      <span className='counter'>{counter}</span>
+      <span className={styles.counter}>{counter}</span>
       </div>
     </div>);
 }

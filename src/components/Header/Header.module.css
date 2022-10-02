@@ -1,4 +1,4 @@
-.Header {
+.header {
     background-color: #555;
     color: #61dafb;
 
@@ -28,24 +28,21 @@
 }
 
 .innerHeader_spacer {
+    display: inline-block;
     line-height: calc(env(safe-area-inset-top, 30));
     height: calc(env(safe-area-inset-top, 30));
-    display: inline-block;
 }
 
 .innerHeader {
+    display: inline-block;
     line-height: 90px;
     vertical-align: middle;
-    display: inline-block;
 }
 
-.Header .counter {
+.counter {
+    display: inline-block;
     box-sizing: unset !important;
     margin-left: 15px;
     height: 10px;
-    display: inline-block;
-}
-
-.Header span.counter {
     width: 40px;
 }

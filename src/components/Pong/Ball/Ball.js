@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Ball.css';
+import styles from './Ball.module.css';
 
-const Ball = () => (
-  <div className="Ball" data-testid="Ball">O</div>
+const Ball = ({x,y}) => (
+  <div className={styles.ball} data-testid="Ball">O</div>
 );
 
-Ball.propTypes = {};
+Ball.propTypes = {
+  x: PropTypes.number,
+  y:PropTypes.number
+};
 
-Ball.defaultProps = {};
+Ball.defaultProps = {x:10, y:10};
 
 
 export default Ball;

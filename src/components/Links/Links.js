@@ -1,6 +1,6 @@
 import React ,{useState} from 'react';
 import PropTypes from 'prop-types';
-import './Links.css';
+import styles from './Links.module.css';
 
 const Links = () => {
 
@@ -22,13 +22,13 @@ const Links = () => {
   ];
 
   return (
-    <div className="Links">
-      
+    <div >
+
       {
         links.map((link, i) => 
           <div key={i}>
            <a
-              className="link"
+              className={styles.link}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer">

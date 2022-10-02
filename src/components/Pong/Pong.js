@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Pong.css';
+import styles from './Pong.module.css';
 import Pill from './Pill/Pill'
 import Ball from './Ball/Ball'
 
 
 const Pong = () => (
-  <div className="Pong" data-testid="Pong">
+  <div className={styles.pong} data-testid="Pong">
     <Pill key="pillFixed"/>
     <Pill key="pillMoving"/>
     <Ball/>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Content.css';
+import styles from './Content.module.css';
 
 const Content = ({counter,title}) => {
 
@@ -22,7 +22,7 @@ const Content = ({counter,title}) => {
 
 
 return (
-  <div className="Content" data-testid="Content">
+  <div className={styles.content} data-testid="Content">
     <header>Search results for "{title}" from archive.org</header>
      {
       posts.slice(0, counter).map((object, i) =>

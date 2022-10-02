@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Pill.css';
+import styles from'./Pill.module.css';
 
 const Pill = () => (
-  <div className="Pill" data-testid="Pill">
+  <div className={styles.pill} data-testid="Pill">
     Pill Component
   </div>
 );

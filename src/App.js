@@ -29,7 +29,7 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App" id="outer-container">
         <Header counter={counter} ></Header>
-        <SideBar counterDefault={counter} callBack={callBack} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <SideBar counterDefault={counter} callBack={callBack} outerContainerId={'outer-container'} />
 
         <div className="App-content">
           <Outlet></Outlet>
@@ -44,8 +44,6 @@ function App() {
         </div>
       </div>
     </Router>
-
-
   );
 }
 

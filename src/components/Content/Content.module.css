@@ -1,12 +1,12 @@
-.Content {
+.content {
     padding-bottom: 30px;
 
 }
-.Content header{
+.content header{
     font-size: larger;
     font-weight: 600;
 }
-.Content a {
+.content a {
     color: white;
     text-decoration: none;
   }

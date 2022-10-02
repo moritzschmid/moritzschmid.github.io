@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { elastic as Menu } from 'react-burger-menu';
 import {Link} from 'react-router-dom';
-
-import './SideBar.css';
+import styles from './SideBar.module.css';
+import './bm.css';
 
 const SideBar = ({ counterDefault, callBack }) => {
 
@@ -30,22 +30,21 @@ const SideBar = ({ counterDefault, callBack }) => {
   }
 
   return (
-    <Menu className='Menu'
+    <Menu className={styles.menu}
     isOpen={isOpen}
     onOpen={handleIsOpen}
     onClose={handleIsOpen}>
      
-      <Link to="/" onClick={closeSideBar}>Home</Link>
-      <Link to="/react" onClick={closeSideBar}>React</Link>
-      <Link to="/redux" onClick={closeSideBar}>Redux</Link>
-      <Link to="/pong" onClick={closeSideBar}>Pong</Link>
-      <Link to="/graph" onClick={closeSideBar}>Graph</Link>
-      <Link to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
+      <Link className={styles.link} to="/" onClick={closeSideBar}>Home</Link>
+      <Link className={styles.link} to="/react" onClick={closeSideBar}>React</Link>
+      <Link className={styles.link} to="/redux" onClick={closeSideBar}>Redux</Link>
+      <Link className={styles.link} to="/pong" onClick={closeSideBar}>Pong</Link>
+      <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>
+      <Link className={styles.link} to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
       
      
-      <span>
+      <span className={styles.counterRow}>
         <input
-          className='counter'
           min="0" max="100" step="1"
           type='range'
           value={counter}
@@ -54,7 +53,7 @@ const SideBar = ({ counterDefault, callBack }) => {
           onTouchEnd={handleInput}>
         </input>
       </span>
-      <span className='counter'>{counter}</span>
+      <span className={styles.counter}>{counter}</span>
     </Menu>
   );
 }
@@ -63,6 +62,8 @@ SideBar.propTypes = {
   counterDefault: PropTypes.number
 };
 
-SideBar.defaultProps = {};
+SideBar.defaultProps = {
+  counterDefault:12
+};
 
 export default SideBar;
