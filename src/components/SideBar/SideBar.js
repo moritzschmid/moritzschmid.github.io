@@ -41,6 +41,7 @@ const SideBar = ({ counterDefault, callBack }) => {
       <Link className={styles.link} to="/pong" onClick={closeSideBar}>Pong</Link>
       <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>
       <Link className={styles.link} to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
+      <Link className={styles.link} to="/tictactoe" onClick={closeSideBar}>TicTacToe</Link>
       
      
       <span className={styles.counterRow}>
