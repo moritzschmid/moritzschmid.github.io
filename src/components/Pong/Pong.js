@@ -5,8 +5,8 @@ import Pill from './Pill/Pill'
 import Ball from './Ball/Ball'
 
 
-const Pong = () => (
-  <div className={styles.pong} data-testid="Pong">
+const Pong = ({dataTestId}) => (
+  <div className={styles.pong} data-testid={dataTestId}>
     <Pill key="pillFixed"/>
     <Pill key="pillMoving"/>
     <Ball/>

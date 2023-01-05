@@ -2,9 +2,9 @@ import { React, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Graph.module.css';
 
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Brush, Label, LabelList } from 'recharts';
+//import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Brush, Label, LabelList } from 'recharts';
 
-const Graph = () => {
+const Graph = ({dataTestId}) => {
   const [termInput, setTermInput] = useState("x*x");
   const [term, setTerm] = useState(termInput);
   const [hasError, setHasError] = useState(false);
@@ -49,7 +49,7 @@ const Graph = () => {
 
 
   return (
-    <div className={styles.graph}>
+    <div className={styles.graph} data-testid={dataTestId}>
       <table>
         <tbody>
 
@@ -86,8 +86,8 @@ const Graph = () => {
       </table>
 
 
-      <div className={styles.chart} data-testid="Graph">
-        <LineChart width={350} height={350} data={data02} syncId="test"  >
+      <div className={styles.chart} >
+        {/* <LineChart width={350} height={350} data={data02} syncId="test"  >
           <CartesianGrid stroke="#f5f5f5" fill="#e6e6e6" />
           <XAxis type="time" dataKey="time" height={40}   >
             <Label value="Uhrzeit" position="insideBottom" stroke="#ff7300" />
@@ -105,7 +105,7 @@ const Graph = () => {
             strokeDasharray=""
           >
           </Line>
-        </LineChart>
+        </LineChart> */}
       </div>
     </div>
   );

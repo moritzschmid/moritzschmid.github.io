@@ -2,7 +2,7 @@ import React ,{useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './Links.module.css';
 
-const Links = () => {
+const Links = ({dataTestId}) => {
 
   var links = [
     {
@@ -25,7 +25,7 @@ const Links = () => {
   ];
 
   return (
-    <div >
+    <div data-testid={dataTestId}>
 
       {
         links.map((link, i) => 

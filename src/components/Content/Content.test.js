@@ -5,7 +5,7 @@ import Content from './Content';
 
 describe('<Content />', () => {
   test('it should mount', () => {
-    render(<Content />);
+    render(<Content dataTestId="Content"/>);
     
     const content = screen.getByTestId('Content');
 

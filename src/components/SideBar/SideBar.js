@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { elastic as Menu } from 'react-burger-menu';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './SideBar.module.css';
 import './bm.css';
 
-const SideBar = ({ counterDefault, callBack }) => {
+const SideBar = ({ counterDefault, callBack, dataTestId }) => {
 
   const [counter, setCounter] = useState(counterDefault);
 
@@ -31,20 +31,22 @@ const SideBar = ({ counterDefault, callBack }) => {
 
   return (
     <Menu className={styles.menu}
-    isOpen={isOpen}
-    onOpen={handleIsOpen}
-    onClose={handleIsOpen}>
-     
+      isOpen={isOpen}
+      onOpen={handleIsOpen}
+      onClose={handleIsOpen}>
+
       <Link className={styles.link} to="/" onClick={closeSideBar}>Home</Link>
+      
       <Link className={styles.link} to="/react" onClick={closeSideBar}>React</Link>
       <Link className={styles.link} to="/redux" onClick={closeSideBar}>Redux</Link>
       <Link className={styles.link} to="/pong" onClick={closeSideBar}>Pong</Link>
-      <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>
+      {/* <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>  */}
       <Link className={styles.link} to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
-      <Link className={styles.link} to="/tictactoe" onClick={closeSideBar}>TicTacToe</Link>
-      
-     
-      <span className={styles.counterRow}>
+      <Link className={styles.link} to="/tictactoe" onClick={closeSideBar}>TicTacToe</Link> 
+
+
+      <span className={styles.counterRow}
+        data-testid={dataTestId}>
         <input
           min="0" max="100" step="1"
           type='range'
@@ -64,7 +66,7 @@ SideBar.propTypes = {
 };
 
 SideBar.defaultProps = {
-  counterDefault:12
+  counterDefault: 12
 };
 
 export default SideBar;

@@ -5,10 +5,10 @@ import AppleMusic from './AppleMusic';
 
 describe('<AppleMusic />', () => {
   test('it should mount', () => {
-    render(<AppleMusic />);
-    
-    const AppleMusic = screen.getByTestId('AppleMusic');
+    render(<AppleMusic dataTestId="AppleMusic" />);
+    const appleMusic = screen.getByTestId('AppleMusic');
+    screen.debug();
 
-    expect(AppleMusic).toBeInTheDocument();
+    expect(appleMusic).toBeInTheDocument();
   });
 });

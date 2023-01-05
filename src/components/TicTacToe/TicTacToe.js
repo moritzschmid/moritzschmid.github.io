@@ -1,16 +1,19 @@
 import React from 'react';
 import styles from './TicTacToe.module.css';
 
-const TicTacToe = () => {
+const TicTacToe = ({dataTestId}) => {
 
-  return (<div className={styles.tictactoe} data-testid="TicTacToe">
-    <header>
-      TicTacToe Component
-    </header>
-    <br />
-    <Game />
+  return (
+    <div
+      className={styles.tictactoe}
+      data-testid={dataTestId}>
+      <header>
+        TicTacToe Component
+      </header>
+      <br />
+      <Game />
 
-  </div>);
+    </div>);
 };
 
 TicTacToe.propTypes = {};

@@ -5,7 +5,7 @@ import Pong from './Pong';
 
 describe('<Pong />', () => {
   test('it should mount', () => {
-    render(<Pong />);
+    render(<Pong dataTestId="Pong" />);
     
     const pong = screen.getByTestId('Pong');
 

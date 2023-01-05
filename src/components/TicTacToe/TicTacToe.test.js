@@ -5,8 +5,8 @@ import TicTacToe from './TicTacToe';
 
 describe('<TicTacToe />', () => {
   test('it should mount', () => {
-    render(<TicTacToe />);
-    
+    render(<TicTacToe dataTestId="TicTacToe"/>);
+    screen.debug();
     const ticTacToe = screen.getByTestId('TicTacToe');
 
     expect(ticTacToe).toBeInTheDocument();

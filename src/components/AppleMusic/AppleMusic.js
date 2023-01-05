@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './AppleMusic.module.css';
 
-const AppleMusic = ({counter,title}) => {
+const AppleMusic = ({counter,title,dataTestId}) => {
 
   const [posts, setPosts] = useState([{ title: "loading ..." }]);
   const [termInput, setTermInput] = useState(title);
@@ -26,7 +26,7 @@ const AppleMusic = ({counter,title}) => {
   }
 
 return (
-  <div className={styles.component} data-testid="AppleMusic">
+  <div className={styles.component} data-testid={dataTestId}>
   <input name="Term" type="text" value={termInput} onChange={handleChange}></input>
     <header>Search results for "{title}" from archive.org</header>
      {
