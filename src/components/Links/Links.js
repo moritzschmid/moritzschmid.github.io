@@ -18,6 +18,9 @@ const Links = () => {
     },{
       title:"React Redux",
       url:"https://react-redux.js.org/"
+    },{
+      title:"React & Jest",
+      url:"https://jestjs.io/docs/tutorial-react"
     }
   ];
 
