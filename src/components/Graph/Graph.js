@@ -1,15 +1,21 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styles from './Graph.module.css';
+import "mafs/build/index.css";
+import { Mafs, CartesianCoordinates, FunctionGraph, Text } from "mafs";
 
-//import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Brush, Label, LabelList } from 'recharts';
 
-const Graph = ({dataTestId}) => {
-  const [termInput, setTermInput] = useState("x*x");
+
+const Graph = ({ dataTestId }) => {
+
+
+  const [termInput, setTermInput] = useState("2*x+5");
   const [term, setTerm] = useState(termInput);
   const [hasError, setHasError] = useState(false);
-  const [min, setMin] = useState(-20);
-  const [max, setMax] = useState(20);
+  const [min, setMin] = useState(-10);
+  const [max, setMax] = useState(10);
+
+  
 
   const handleChangeMin = event => {
     setMin(event.target.value);
@@ -64,7 +70,11 @@ const Graph = ({dataTestId}) => {
               {hasError ? <span className={styles.error}> Fehler!</span> : <span></span>}
             </td>
           </tr>
-          <tr>
+          
+        </tbody>
+      </table>
+
+{/* <tr>
             <td>
               <label htmlFor="min">Min: </label>
             </td>
@@ -81,31 +91,14 @@ const Graph = ({dataTestId}) => {
               <input name="max" type="number" value={max} onChange={handleChangeMax}></input>
             </td>
             <td>&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
-
+          </tr>  */}
 
       <div className={styles.chart} >
-        {/* <LineChart width={350} height={350} data={data02} syncId="test"  >
-          <CartesianGrid stroke="#f5f5f5" fill="#e6e6e6" />
-          <XAxis type="time" dataKey="time" height={40}   >
-            <Label value="Uhrzeit" position="insideBottom" stroke="#ff7300" />
-          </XAxis>
-          <YAxis type="number" dataKey="height" width={60}  >
-            <Label value="Höhne (m)" position="insideLeft" angle={90} stroke="#ff7300" begin={1000} />
-          </YAxis>
-          <Line
-            key="time"
-            type="monotone"
-            dataKey="height"
-            stroke="#ff7300"
-            dot={false}
-            strokeOpacity="100"
-            strokeDasharray=""
-          >
-          </Line>
-        </LineChart> */}
+        <Mafs viewBox={{ y: [-max, max] }}>
+          <Text x={-10} y={9}>I love math!</Text>
+          <CartesianCoordinates subdivisions={2} />
+          <FunctionGraph.OfX y={(x) => eval(term)} />
+        </Mafs>
       </div>
     </div>
   );

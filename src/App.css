@@ -3,8 +3,8 @@
 }
 
 .App p {
-  margin:0px;
-  margin-top:10px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 .App-logo {
@@ -29,21 +29,22 @@
   flex-direction: column;
   font-size: 15px;
   color: white;
-  top:90px;
-  position:absolute;
+  top: 90px;
+  position: absolute;
   /*respect header*/
-  padding-top: calc(env(safe-area-inset-top,0) + 10px);
-  padding-left: calc(env(safe-area-inset-left,0) + 30px );
+  padding-top: calc(env(safe-area-inset-top, 0) + 10px);
+  padding-left: calc(env(safe-area-inset-left, 0) + 30px);
 
-  padding-right:30px;
+  padding-right: 30px;
   font-weight: 100;
   width: 100%;
+  height: calc(100vh - 90px);
 }
 
 
 
 .App .spacer {
-padding-bottom: 20px;
+  padding-bottom: 20px;
 
 }
 
@@ -51,13 +52,14 @@ padding-bottom: 20px;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-#cssAnchor{
-  padding-bottom:40px;
+#cssAnchor {
+  padding-bottom: 40px;
 }
 
 #cssAnchor::before {

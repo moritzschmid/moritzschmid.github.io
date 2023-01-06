@@ -6,8 +6,14 @@ import '@testing-library/jest-dom/extend-expect';
 jest.mock('recharts');
 import Graph from './Graph';
 
+class ResizeObserver {
+  observe() {}
+  unobserve() {}
+}
 
 describe('<Graph />', () => {
+  window.ResizeObserver = ResizeObserver;
+
   test('it should mount', () => {
      render(<Graph dataTestId="Graph" />);
     

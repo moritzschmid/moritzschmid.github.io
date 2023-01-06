@@ -40,7 +40,7 @@ const SideBar = ({ counterDefault, callBack, dataTestId }) => {
       <Link className={styles.link} to="/react" onClick={closeSideBar}>React</Link>
       <Link className={styles.link} to="/redux" onClick={closeSideBar}>Redux</Link>
       <Link className={styles.link} to="/pong" onClick={closeSideBar}>Pong</Link>
-      {/* <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>  */}
+      <Link className={styles.link} to="/graph" onClick={closeSideBar}>Graph</Link>  
       <Link className={styles.link} to="/applemusic" onClick={closeSideBar}>AppleMusic</Link>
       <Link className={styles.link} to="/tictactoe" onClick={closeSideBar}>TicTacToe</Link> 
 

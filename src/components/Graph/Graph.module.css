@@ -1,5 +1,6 @@
 .chart  {
-    padding-top: 30px;
+    padding-top: 10px;
+    height:90%;
 }
 
 .s-label {
@@ -16,10 +17,4 @@
 .graph {
  text-align:center;
  width: 100%;
-}
-
-.graph label {
-    min-width:80px;
-    font-weight:600;
-    
 }

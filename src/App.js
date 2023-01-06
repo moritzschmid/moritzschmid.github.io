@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
 import Links from './components/Links/Links';
 import Pong from './components/Pong/Pong';
-// import Graph from './components/Graph/Graph';
+import Graph from './components/Graph/Graph';
 import AppleMusic from './components/AppleMusic/AppleMusic';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import React, { useState, useEffect } from 'react';
@@ -39,7 +39,7 @@ function App() {
             <Route path="redux" element={<Content counter={counter} title="redux" key="content1"></Content>} />
             <Route path="react" element={<Content counter={counter} key="content2"></Content>} />
             <Route path="pong" element={<Pong />} />
-            {/* <Route path="graph" element={<Graph />} /> */}
+            <Route path="graph" element={<Graph />} /> 
             <Route path="applemusic" element={<AppleMusic counter={counter} title="Billy" />} />
             <Route path="tictactoe" element={<TicTacToe />} />
           </Routes>
