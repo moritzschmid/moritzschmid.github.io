@@ -5,11 +5,10 @@ import Links from './Links';
 
 describe('<Links />', () => {
   test('it should mount', () => {
-   render(<Links dataTestId={"Links"}/>);
-    
-   screen.debug();
-   const l = screen.getByTestId('Links');
-   expect(l).toBeInTheDocument();
+    render(<Links dataTestId={"Links"} />);
+
+    const l = screen.getByTestId('Links');
+    expect(l).toBeInTheDocument();
 
     const ll = screen.getByText('Learn React');
 
