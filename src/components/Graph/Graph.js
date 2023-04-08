@@ -1,8 +1,9 @@
-import { React, useState, useEffect, useRef} from 'react';
+import { React, useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Graph.module.css';
-import "mafs/build/index.css";
-import { Mafs, CartesianCoordinates, FunctionGraph, Text } from "mafs";
+import "mafs/core.css";
+import "mafs/font.css";
+import { Mafs, Coordinates, Plot, Text } from "mafs";
 
 
 
@@ -15,7 +16,7 @@ const Graph = ({ dataTestId }) => {
   const [min, setMin] = useState(-10);
   const [max, setMax] = useState(10);
 
-  
+
 
   const handleChangeMin = event => {
     setMin(event.target.value);
@@ -70,11 +71,11 @@ const Graph = ({ dataTestId }) => {
               {hasError ? <span className={styles.error}> Fehler!</span> : <span></span>}
             </td>
           </tr>
-          
+
         </tbody>
       </table>
 
-{/* <tr>
+      {/* <tr>
             <td>
               <label htmlFor="min">Min: </label>
             </td>
@@ -96,8 +97,8 @@ const Graph = ({ dataTestId }) => {
       <div className={styles.chart} >
         <Mafs viewBox={{ y: [-max, max] }}>
           <Text x={-10} y={9}>I love math!</Text>
-          <CartesianCoordinates subdivisions={2} />
-          <FunctionGraph.OfX y={(x) => eval(term)} />
+          <Coordinates.Cartesian subdivisions={2} />
+          <Plot.OfX y={(x) => eval(term)} />
         </Mafs>
       </div>
     </div>
