@@ -5,14 +5,14 @@ import SideBar from './SideBar';
 
 
 import { storiesOf } from '@storybook/react';
-import StoryRouter from 'storybook-react-router';
+//import StoryRouter from 'storybook-react-router';
 
 
-storiesOf('SideBar', module)
-  .addDecorator(StoryRouter())
-  .add('sideBar', () => (
-    <SideBar />
-  ));
+// storiesOf('SideBar', module)
+//   //.addDecorator(StoryRouter())
+//   .add('sideBar', () => (
+//     <SideBar />
+//   ));
 
 export default {
   title: "SideBar",
